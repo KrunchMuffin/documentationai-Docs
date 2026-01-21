@@ -1,0 +1,148 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and new features in DAB Worx.
+---
+
+## Recent Releases
+
+Stay current with DAB Worx by reviewing the latest version history. You receive automatic notifications for major updates through your dashboard at `https://dashboard.example.com`.
+
+<Columns cols={3}>
+  <Card title="v1.2.0" icon="zap" href="#v120">
+    Enhanced performance and new collaboration tools.
+  </Card>
+  <Card title="v1.1.0" icon="settings" href="#v110">
+    Configuration improvements and bug fixes.
+  </Card>
+  <Card title="v1.0.0" icon="rocket" href="#v100">
+    Initial stable release with core features.
+  </Card>
+</Columns>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams, allowing multiple users to edit documents simultaneously.
+- Introduced dashboard analytics with charts showing usage metrics.
+
+## Improvements
+
+- Optimized API response times by `>30%` for high-traffic endpoints.
+- Enhanced search functionality with fuzzy matching.
+
+## Bug Fixes
+
+- Fixed intermittent sync issues during large file uploads.
+- Resolved authentication errors when using custom domains.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "improvement"]}>
+
+## Improvements
+
+- Streamlined onboarding flow with interactive tutorials.
+- Added support for custom branding in shared links.
+
+## Bug Fixes
+
+- Corrected validation errors in form submissions.
+- Fixed mobile responsiveness issues in the editor.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core document editor with rich text support.
+- User authentication via `https://auth.example.com`.
+- API integration at `https://api.example.com/v1/docs`.
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0` to `/v1`. Migrate using the code below.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Old endpoint (v0)
+  // fetch('https://api.example.com/v0/docs');
+
+  // New endpoint (v1)
+  const response = await fetch('https://api.example.com/v1/docs', {
+    headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+  });
+  ```
+  ```python
+  import requests
+
+  # Old endpoint (v0)
+  # response = requests.get('https://api.example.com/v0/docs')
+
+  # New endpoint (v1)
+  response = requests.get('https://api.example.com/v1/docs', headers={
+      'Authorization': f'Bearer {YOUR_API_KEY}'
+  })
+  ```
+</CodeGroup>
+
+</Update>
+
+## How to Update
+
+Follow these steps to upgrade DAB Worx in your project.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+    Review the changelog for breaking changes.
+
+    <Callout kind="info">
+      Test in a staging environment first.
+    </Callout>
+
+  </Step>
+  <Step title="Run Update" icon="download">
+
+    ```bash
+    npm update dab-worx
+    ```
+
+    Or for Yarn:
+
+````bash
+    yarn upgrade dab-worx@latest
+````
+
+  </Step>
+  <Step title="Verify" icon="play-circle">
+
+    Restart your application and test key endpoints like `https://api.example.com/v1/docs`.
+
+  </Step>
+</Steps>
+
+## Upcoming Features
+
+<ExpandableGroup>
+  <Expandable title="AI-Powered Editing" default-open="true">
+    Coming in v1.3.0: Auto-suggest and grammar corrections integrated with your workflows.
+  </Expandable>
+  <Expandable title="Advanced Integrations">
+    Webhook support at `https://your-webhook-url.com/webhook` and Slack notifications.
+  </Expandable>
+</ExpandableGroup>
+
+<Tabs>
+  <Tab title="Subscribe to Updates" icon="bell">
+    Enable notifications in your dashboard settings.
+  </Tab>
+  <Tab title="Contribute" icon="github">
+    Report issues or submit PRs at our GitHub repository.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Bookmark this page and check back weekly. Join our community forum for beta access.
+</Callout>
